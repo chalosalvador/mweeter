@@ -68,7 +68,7 @@ function useAuthProvider() {
   const verifyIfNewUserAndSave = async () => {
     try {
       const result = await getRedirectResult(auth);
-      console.log("result", result);
+
       if (result) {
         const { isNewUser } = getAdditionalUserInfo(result);
 
@@ -119,7 +119,6 @@ function useAuthProvider() {
     const unsubscribeAuthState = onAuthStateChanged(
       auth,
       async (userAuthData) => {
-        console.log("userAuthData", userAuthData);
         if (userAuthData) {
           await verifyIfNewUserAndSave();
 

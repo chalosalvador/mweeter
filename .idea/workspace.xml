@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24a88e22-c61b-467a-ad39-d254054329da" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/firebase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/useAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAuth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1637335026835</updated>
       <workItem from="1637335032687" duration="3103000" />
-      <workItem from="1637772936960" duration="35856000" />
+      <workItem from="1637772936960" duration="36125000" />
     </task>
     <servers />
   </component>
