@@ -6,8 +6,8 @@ import {
   getRedirectResult,
   getAdditionalUserInfo,
 } from "firebase/auth";
-import { auth } from "../firebase";
-import { User } from "../firebase/users";
+import { auth } from "services";
+import { User } from "services/users";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 
@@ -95,11 +95,6 @@ function useAuthProvider() {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log("errorMessage", errorCode, errorMessage);
-      // The email of the user's account used.
-      // const email = error.email;
-      // The AuthCredential type that was used.
-      // const credential = googleAuthProvider.credentialFromError(error);
-      // ...
     }
   };
 
