@@ -1,6 +1,7 @@
 import Head from "next/head";
+import withAuth from "hocs/withAuth";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
@@ -78,4 +79,6 @@ export default function Home() {
       </footer>
     </div>
   );
-}
+};
+
+export default withAuth({ renderOnlyWhenAuthed: true })(Home);
