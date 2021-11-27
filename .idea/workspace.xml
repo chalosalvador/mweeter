@@ -6,17 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="24a88e22-c61b-467a-ad39-d254054329da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Loading.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hocs/withAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/withAuth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAuth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1637335026835</updated>
       <workItem from="1637335032687" duration="3103000" />
-      <workItem from="1637772936960" duration="58112000" />
+      <workItem from="1637772936960" duration="59972000" />
     </task>
     <servers />
   </component>

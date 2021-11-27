@@ -24,6 +24,9 @@ const schema = yup
       .required("Enter your last name"),
     displayName: yup
       .string()
+      .matches(/^[a-z0-9_]+$/, {
+        message: "Only lowercase letters, numbers and underscore",
+      })
       .typeError("Enter your username")
       .required("Enter your username"),
   })
