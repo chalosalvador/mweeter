@@ -4,6 +4,24 @@
 
 @layer components {
 
+  input[type="text"] {
+    @apply mt-1 block rounded-md border border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50;
+  }
+
+  input[type="text"][disabled] {
+    @apply bg-gray-100 text-gray-400;
+  }
+
+  .btn-primary {
+    @apply mt-1 cursor-pointer px-6 py-3 bg-indigo-400 text-white rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50;
+  }
+
+  .btn-primary[disabled] {
+    @apply bg-indigo-200;
+  }
+
+
+
   @keyframes animation {
     0% {
       stroke-dasharray: 1 98;

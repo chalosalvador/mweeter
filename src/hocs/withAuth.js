@@ -22,7 +22,7 @@ const withAuth =
       const { user, isLoadingUser } = useAuth();
       const hasAuth = !!user;
       const router = useRouter();
-      const hasCompletedProfile = user?.username;
+      const hasCompletedProfile = user?.displayName;
       const shouldRedirectToProfile =
         user !== false &&
         !hasCompletedProfile &&

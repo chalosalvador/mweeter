@@ -3,8 +3,6 @@ import {
   signInWithRedirect,
   GoogleAuthProvider,
   onAuthStateChanged,
-  getRedirectResult,
-  getAdditionalUserInfo,
 } from "firebase/auth";
 import { auth } from "services";
 import { User } from "services/users";
@@ -22,7 +20,7 @@ export function AuthProvider({ children }) {
 }
 
 AuthProvider.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.any,
 };
 
 export const useAuth = () => {
@@ -65,60 +63,43 @@ function useAuthProvider() {
     handleUser(false);
   }
 
-  const verifyIfNewUserAndSave = async () => {
-    try {
-      const result = await getRedirectResult(auth);
-
-      if (result) {
-        const { isNewUser } = getAdditionalUserInfo(result);
-
-        if (isNewUser) {
-          const { email, photoURL, uid, displayName } = result.user;
-          const fullName = displayName.split(" ", 2);
-          try {
-            await User.save(uid, {
-              email,
-              photoURL,
-              uid,
-              displayName,
-              firstName: fullName[0] || null,
-              lastName: fullName[1] || null,
-              username: null,
-            });
-          } catch (e) {
-            console.error("Error adding user to db: ", e);
-          }
-        }
-      }
-    } catch (error) {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log("errorMessage", errorCode, errorMessage);
-    }
-  };
-
   useEffect(() => {
-    const onUserDataChange = (doc) => {
-      if (doc.exists()) {
-        const userData = doc.data();
-        handleUser(userData);
-      } else {
-        // User not in db, sign out
-        console.log("User not in db, sign out");
-        handleUser(false);
-      }
-    };
-
     let unsubscribeUserData;
     const unsubscribeAuthState = onAuthStateChanged(
       auth,
       async (userAuthData) => {
-        if (userAuthData) {
-          await verifyIfNewUserAndSave();
+        const onUserDataChange = (doc) => {
+          const getUserDataFromAuth = () => {
+            const { email, photoURL, uid, displayName } = userAuthData;
+            const fullName = displayName.split(" ", 2);
 
+            return {
+              email,
+              photoURL,
+              uid,
+              firstName: fullName[0],
+              lastName: fullName[1],
+            };
+          };
+
+          let userFound = false;
+          if (doc.exists()) {
+            const userData = doc.data();
+            userFound = userData.uid === userAuthData.uid;
+            if (userFound) {
+              handleUser(userData);
+            }
+          }
+
+          if (!userFound) {
+            handleUser(getUserDataFromAuth());
+            unsubscribeUserData();
+          }
+        };
+
+        if (userAuthData) {
           unsubscribeUserData = User.subscribe(
-            userAuthData.uid,
+            userAuthData.displayName,
             onUserDataChange
           );
         } else {
