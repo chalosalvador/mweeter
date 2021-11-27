@@ -17,7 +17,7 @@ const UserInfo = () => {
         <div>
           {user.firstName} {user.lastName}
         </div>
-        <div>@{user.username}</div>
+        <div>@{user.displayName}</div>
       </div>
     )
   );
