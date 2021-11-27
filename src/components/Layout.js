@@ -1,16 +1,14 @@
 import PropTypes from "prop-types";
-import LogoutButton from "./LogoutButton";
-import UserInfo from "./UserInfo";
+import Sidebar from "components/Sidebar";
+import { useAuth } from "hooks/useAuth";
 
 const Layout = ({ children }) => {
+  const { user } = useAuth();
   return (
-    <div>
-      <div>
-        <UserInfo />
-        <LogoutButton />
-      </div>
+    <div className="flex justify-center">
+      {user && <Sidebar />}
 
-      {children}
+      <div className="py-10 px-14 w-full">{children}</div>
     </div>
   );
 };

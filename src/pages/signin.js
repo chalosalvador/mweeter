@@ -5,13 +5,15 @@ const SignIn = () => {
   const { signInWithGoogle } = useAuth();
 
   return (
-    <div>
-      <button
-        className="border border-blue-300 shadow rounded-md p-4"
-        onClick={signInWithGoogle}
-      >
-        Sign in with Google
-      </button>
+    <div className="w-full h-screen flex justify-center">
+      <div>
+        <button
+          className="border border-blue-300 shadow rounded-md p-4"
+          onClick={signInWithGoogle}
+        >
+          Sign in with Google
+        </button>
+      </div>
     </div>
   );
 };

@@ -20,7 +20,13 @@
     @apply bg-indigo-200;
   }
 
+  .menu-item {
+    @apply p-2 my-2 rounded text-gray-600 hover:bg-gray-100 hover:text-gray-800;
+  }
 
+  .menu-item.active {
+    @apply bg-gray-100 text-gray-800;
+  }
 
   @keyframes animation {
     0% {

@@ -80,7 +80,7 @@ const Profile = () => {
 
   return (
     <div className="w-full">
-      <div className="font-bold text-lg">Your Profile</div>
+      <div className="font-bold text-xl">Your Profile</div>
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex">
