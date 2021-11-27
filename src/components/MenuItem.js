@@ -25,7 +25,7 @@ const MenuItem = ({ route, label }) => {
 
 MenuItem.propTypes = {
   route: PropTypes.string,
-  label: PropTypes.string,
+  label: PropTypes.any,
 };
 
 export default MenuItem;
