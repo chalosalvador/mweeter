@@ -6,7 +6,6 @@ import {
 } from "firebase/auth";
 import { auth } from "services";
 import { User } from "services/users";
-import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 
 const AuthContext = createContext(null);
@@ -33,7 +32,6 @@ export const useAuth = () => {
 
 function useAuthProvider() {
   const [user, setUser] = useState(null);
-  const router = useRouter();
 
   const handleUser = (userData) => {
     if (userData) {
@@ -115,7 +113,7 @@ function useAuthProvider() {
         unsubscribeUserData();
       }
     };
-  }, [router]);
+  }, []);
 
   return {
     isLoadingUser: user === null,
