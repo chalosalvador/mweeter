@@ -1,10 +1,14 @@
 import Loading from "components/Loading";
 import PropTypes from "prop-types";
 
-const Button = ({ disabled, className, children }) => {
+const Button = ({ disabled, className, children, loading, ...rest }) => {
   return (
-    <button className={`flex ${className}`} disabled={disabled}>
-      {disabled && <Loading className="w-6 mr-3 opacity-30" />}
+    <button
+      className={`flex items-center ${className}`}
+      disabled={disabled}
+      {...rest}
+    >
+      {loading && <Loading className="w-4 mr-3 opacity-30" />}
       {children}
     </button>
   );
@@ -12,6 +16,7 @@ const Button = ({ disabled, className, children }) => {
 
 Button.propTypes = {
   disabled: PropTypes.bool,
+  loading: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.elementType,
 };

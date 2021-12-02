@@ -1,18 +1,16 @@
 import Image from "next/image";
-import { useAuth } from "hooks/useAuth";
+import PropTypes from "prop-types";
 
-const UserInfo = () => {
-  const { user } = useAuth();
-
+const UserInfo = ({ user }) => {
   return (
     user && (
       <div className="flex cursor-default">
         <div className="mr-3">
           <Image
             src={user.photoURL}
-            width={45}
-            height={45}
-            alt={`${user.firstName} ${user.lastName}`}
+            width={36}
+            height={36}
+            alt={user.displayName}
             className="rounded-full"
           />
         </div>
@@ -26,6 +24,15 @@ const UserInfo = () => {
       </div>
     )
   );
+};
+
+UserInfo.propTypes = {
+  user: PropTypes.shape({
+    photoURL: PropTypes.string,
+    displayName: PropTypes.string,
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+  }),
 };
 
 export default UserInfo;

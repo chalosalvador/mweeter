@@ -1,7 +1,15 @@
 import withAuth from "hocs/withAuth";
+import Head from "next/head";
 
 const Following = () => {
-  return <div className="font-bold text-xl">People you follow</div>;
+  return (
+    <>
+      <Head>
+        <title>mweeter</title>
+      </Head>
+      <div className="font-bold text-xl">People you follow</div>;
+    </>
+  );
 };
 
 export default withAuth({ renderOnlyWhenAuthed: true })(Following);

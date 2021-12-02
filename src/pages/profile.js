@@ -11,6 +11,7 @@ import { useState } from "react";
 import Button from "components/Button";
 import { auth } from "services";
 import { Routes } from "constants/routes";
+import Head from "next/head";
 
 const schema = yup
   .object({
@@ -65,13 +66,8 @@ const Profile = () => {
       }
     } catch (e) {
       toast.error("Could not update profile. Try with a different handle.", {
+        toastId: "error-profile",
         position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
       });
     } finally {
       setLoading(false);
@@ -80,6 +76,10 @@ const Profile = () => {
 
   return (
     <div className="w-full">
+      <Head>
+        <title>mweeter</title>
+      </Head>
+
       <div className="font-bold text-xl">Your Profile</div>
 
       <form onSubmit={handleSubmit(onSubmit)}>
