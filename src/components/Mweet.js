@@ -23,7 +23,7 @@ const Mweet = ({ mweet, userData }) => {
 
           <span className="mr-2">@{mweet.uid}</span>
           <span className="mr-2 font-bold">&bull;</span>
-          <MweetDate dateInSeconds={mweet.createdAt} />
+          <MweetDate dateInSeconds={mweet.createdAt?.seconds} />
         </div>
 
         <div>{mweet.text}</div>

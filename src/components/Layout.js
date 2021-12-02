@@ -5,7 +5,7 @@ import { useAuth } from "hooks/useAuth";
 const Layout = ({ children }) => {
   const { user } = useAuth();
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center max-w-7xl mx-auto">
       {user && <Sidebar />}
 
       <div className="py-10 px-14 w-full">{children}</div>

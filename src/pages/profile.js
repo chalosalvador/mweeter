@@ -66,13 +66,8 @@ const Profile = () => {
       }
     } catch (e) {
       toast.error("Could not update profile. Try with a different handle.", {
+        toastId: "error-profile",
         position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
       });
     } finally {
       setLoading(false);

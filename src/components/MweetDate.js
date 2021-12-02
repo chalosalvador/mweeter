@@ -2,7 +2,7 @@ import { format } from "date-fns";
 import PropTypes from "prop-types";
 
 const MweetDate = ({ dateInSeconds }) => {
-  const dateInMilliseconds = dateInSeconds && dateInSeconds.seconds * 1000;
+  const dateInMilliseconds = dateInSeconds && dateInSeconds * 1000;
 
   return dateInMilliseconds ? (
     <span className="mr-2 has-tooltip cursor-pointer">

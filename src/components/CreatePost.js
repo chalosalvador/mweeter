@@ -57,7 +57,7 @@ const CreatePost = () => {
 
           <div className="flex justify-end">
             <Button
-              className="btn-primary mt-4"
+              className="btn-primary mt-4 px-8"
               disabled={!isValid || loading}
               loading={loading}
             >

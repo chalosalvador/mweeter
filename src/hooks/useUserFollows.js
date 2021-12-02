@@ -23,7 +23,9 @@ export function UserFollowsProvider({ children }) {
         };
 
         snapshot.forEach((doc) => {
-          displayNames.push(doc.id);
+          if (!doc.metadata.hasPendingWrites) {
+            displayNames.push(doc.id);
+          }
         });
 
         const usersSnap = await User.getSome(displayNames);

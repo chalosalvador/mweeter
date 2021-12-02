@@ -3,6 +3,7 @@ import withAuth from "hocs/withAuth";
 import CreatePost from "components/CreatePost";
 import Feed from "components/Feed";
 import { UserFollowsProvider } from "hooks/useUserFollows";
+import RecommendationsList from "components/RecommendationsList";
 
 const Home = () => {
   return (
@@ -14,11 +15,20 @@ const Home = () => {
 
       <div className="font-bold text-xl mb-8">Your feed</div>
 
-      <CreatePost />
-
       <UserFollowsProvider>
-        <Feed />
-        {/* recommendatiosn */}
+        <div className="flex">
+          <div className="w-2/3 mr-20">
+            <div className="mb-10">
+              <CreatePost />
+            </div>
+
+            <Feed />
+          </div>
+
+          <div className="w-1/3">
+            <RecommendationsList />
+          </div>
+        </div>
       </UserFollowsProvider>
     </div>
   );

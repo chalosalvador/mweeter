@@ -11,6 +11,7 @@ import {
   where,
   orderBy,
   getDocs,
+  limit,
 } from "firebase/firestore";
 import { db } from "./index";
 
@@ -31,10 +32,10 @@ export const User = {
       uid,
       createdAt: serverTimestamp(),
     }),
-  subscribeFeed: (callback) => {
+  subscribeFeedFromUsers: (users, callback) => {
     const feed = query(
       collectionGroup(db, "mweets"),
-      where("uid", "in", ["chalosalvador_menta", "claudio"]),
+      where("uid", "in", users),
       orderBy("createdAt", "desc")
       // limit(20)
     );
@@ -51,11 +52,12 @@ export const User = {
     const follows = query(collection(db, "users", displayName, "follows"));
     return onSnapshot(follows, callback);
   },
-  // getRecommendations: () => {
-  //   const recommendations = query(
-  //     collectionGroup(db, "follows"),
-  //     where("uid", "not-in", ["chalosalvador_menta", "claudio"]),
-  //     limit(20)
-  //   );
-  // },
+  subscribeRecommendations: (excludeUsers, callback) => {
+    const recommendations = query(
+      usersRef,
+      where("displayName", "not-in", excludeUsers),
+      limit(20)
+    );
+    return onSnapshot(recommendations, callback);
+  },
 };

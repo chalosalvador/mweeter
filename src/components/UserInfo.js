@@ -1,9 +1,7 @@
 import Image from "next/image";
-import { useAuth } from "hooks/useAuth";
+import PropTypes from "prop-types";
 
-const UserInfo = () => {
-  const { user } = useAuth();
-
+const UserInfo = ({ user }) => {
   return (
     user && (
       <div className="flex cursor-default">
@@ -26,6 +24,15 @@ const UserInfo = () => {
       </div>
     )
   );
+};
+
+UserInfo.propTypes = {
+  user: PropTypes.shape({
+    photoURL: PropTypes.string,
+    displayName: PropTypes.string,
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+  }),
 };
 
 export default UserInfo;
