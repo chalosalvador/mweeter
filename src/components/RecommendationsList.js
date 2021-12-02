@@ -43,7 +43,7 @@ const RecommendationsList = () => {
       ))
     ) : (
       <div className="text-gray-400 text-center w-64">
-        No more users to follow. <br /> You&apos;ve got lot of friends ;)
+        No more users to follow. <br /> You&apos;ve got lots of friends ;)
       </div>
     );
   };
