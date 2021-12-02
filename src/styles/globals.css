@@ -4,7 +4,8 @@
 
 @layer components {
 
-  input[type="text"] {
+  input[type="text"],
+  textarea {
     @apply mt-1 block rounded-md border border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50;
   }
 
@@ -26,6 +27,14 @@
 
   .menu-item.active {
     @apply bg-gray-100 text-gray-800;
+  }
+
+  .tooltip {
+    @apply invisible absolute;
+  }
+
+  .has-tooltip:hover .tooltip {
+    @apply visible z-50;
   }
 
   @keyframes animation {

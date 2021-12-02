@@ -5,6 +5,16 @@ service cloud.firestore {
       allow read: if request.auth != null;
       allow create: if request.auth != null && !exists(/databases/$(database)/documents/users/$(displayName));
       allow update: if request.auth != null && request.auth.uid == resource.data.uid && request.resource.data.displayName == resource.data.displayName && request.resource.data.email == resource.data.email;
+
+
+    }
+
+    match /{path=**}/mweets/{mweet} {
+      allow read, write: if true;
+    }
+
+    match /{path=**}/follows/{displayName} {
+      allow read, write: if true;
     }
   }
 }

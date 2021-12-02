@@ -10,9 +10,9 @@ const UserInfo = () => {
         <div className="mr-3">
           <Image
             src={user.photoURL}
-            width={45}
-            height={45}
-            alt={`${user.firstName} ${user.lastName}`}
+            width={36}
+            height={36}
+            alt={user.displayName}
             className="rounded-full"
           />
         </div>

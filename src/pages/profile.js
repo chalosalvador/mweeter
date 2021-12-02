@@ -11,6 +11,7 @@ import { useState } from "react";
 import Button from "components/Button";
 import { auth } from "services";
 import { Routes } from "constants/routes";
+import Head from "next/head";
 
 const schema = yup
   .object({
@@ -80,6 +81,10 @@ const Profile = () => {
 
   return (
     <div className="w-full">
+      <Head>
+        <title>mweeter</title>
+      </Head>
+
       <div className="font-bold text-xl">Your Profile</div>
 
       <form onSubmit={handleSubmit(onSubmit)}>
