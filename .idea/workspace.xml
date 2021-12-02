@@ -6,19 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="24a88e22-c61b-467a-ad39-d254054329da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firestore.rules" beforeDir="false" afterPath="$PROJECT_DIR$/firestore.rules" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CreatePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreatePost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Feed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Mweet.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Mweet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MweetDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MweetDate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useUserFollows.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUserFollows.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecommendedItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecommendedItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserInfoSkeleton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserInfoSkeleton.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +75,7 @@
       <updated>1637335026835</updated>
       <workItem from="1637335032687" duration="3103000" />
       <workItem from="1637772936960" duration="65819000" />
-      <workItem from="1638202135933" duration="36179000" />
+      <workItem from="1638202135933" duration="36304000" />
     </task>
     <servers />
   </component>
