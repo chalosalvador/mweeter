@@ -5,7 +5,7 @@ import MweetSkeleton from "components/MweetSkeleton";
 import Mweet from "components/Mweet";
 
 const Feed = () => {
-  const [feed, setFeed] = useState([]);
+  const [feed, setFeed] = useState(null);
   const { usersData, displayNames } = useUserFollows();
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Feed = () => {
     };
   }, [displayNames]);
 
-  if (!usersData) {
+  if (!usersData || !feed) {
     return new Array(10).fill(true).map((e, i) => <MweetSkeleton key={i} />);
   }
 
