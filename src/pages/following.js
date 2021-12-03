@@ -1,5 +1,7 @@
 import withAuth from "hocs/withAuth";
 import Head from "next/head";
+import { UserFollowsProvider } from "hooks/useUserFollows";
+import FollowingList from "components/FollowingList";
 
 const Following = () => {
   return (
@@ -7,7 +9,10 @@ const Following = () => {
       <Head>
         <title>mweeter</title>
       </Head>
-      <div className="font-bold text-xl">People you follow</div>;
+      <div className="font-bold text-xl">People you follow</div>
+      <UserFollowsProvider>
+        <FollowingList />
+      </UserFollowsProvider>
     </>
   );
 };

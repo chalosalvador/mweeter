@@ -4,7 +4,7 @@ import FollowButton from "components/FollowButton";
 
 const RecommendedItem = ({ user }) => {
   return (
-    <div className="flex justify-between items-center py-5 border-t border-gray-200">
+    <div className="flex justify-between items-center py-5 border-t border-gray-200 w-80">
       <UserInfo user={user} />
 
       <FollowButton userToFollow={user.displayName} />
