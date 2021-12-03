@@ -88,7 +88,6 @@ function useAuthProvider() {
             const userData = doc.data();
             userFound = userData.uid === userAuthData.uid;
             if (userFound) {
-              console.log("userData", userData);
               handleUser(userData);
             }
           }
