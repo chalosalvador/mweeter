@@ -6,6 +6,8 @@ import * as yup from "yup";
 import Button from "components/Button";
 import { useState } from "react";
 import { User } from "services/users";
+import { toast } from "react-toastify";
+import { auth } from "services";
 
 const schema = yup
   .object({
@@ -19,24 +21,32 @@ const schema = yup
 
 const CreatePost = () => {
   const { user } = useAuth();
+  console.log("user", user.displayName);
+  console.log("auth.currentUser", auth.currentUser);
   const [loading, setLoading] = useState(false);
 
   const {
     register,
     handleSubmit,
     reset,
-    formState: { isValid, errors },
+    formState: { isValid },
   } = useForm({
     mode: "onChange",
     resolver: yupResolver(schema),
   });
   const onSubmit = async ({ text }) => {
     setLoading(true);
-    await User.addMweet(user.displayName, text);
+    await User.addMweet(user.displayName, text).catch((e) => {
+      console.error("The was an error :(, please try again.", e);
+      toast.error("The was an error :( please try again.", {
+        toastId: "error_send_mweet",
+        position: "top-center",
+      });
+      setLoading(false);
+    });
     reset();
     setLoading(false);
   };
-  console.log("errors", !!errors.text);
 
   return (
     <div className="flex">
