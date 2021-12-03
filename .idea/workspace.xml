@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="24a88e22-c61b-467a-ad39-d254054329da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Feed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecommendedItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecommendedItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/following.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/following.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JavaScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/services" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -56,6 +61,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/services" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
@@ -74,7 +80,7 @@
       <updated>1637335026835</updated>
       <workItem from="1637335032687" duration="3103000" />
       <workItem from="1637772936960" duration="65819000" />
-      <workItem from="1638202135933" duration="37387000" />
+      <workItem from="1638202135933" duration="41475000" />
     </task>
     <servers />
   </component>

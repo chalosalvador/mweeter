@@ -5,7 +5,7 @@ const UserInfo = ({ user }) => {
   return (
     user && (
       <div className="flex cursor-default">
-        <div className="mr-3">
+        <div className="mr-3 flex-shrink-0">
           <Image
             src={user.photoURL}
             width={36}

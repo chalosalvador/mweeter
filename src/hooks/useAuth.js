@@ -73,7 +73,10 @@ function useAuthProvider() {
 
             return {
               email,
-              photoURL,
+              //todo set a placeholder
+              photoURL:
+                photoURL ||
+                "https://firebasestorage.googleapis.com/v0/b/mweeter-chalo-dev.appspot.com/o/Portrait_Placeholder.png?alt=media&token=20d3023e-c469-4810-9666-cc025a7cecb5",
               uid,
               firstName: fullName[0],
               lastName: fullName[1],

@@ -12,6 +12,7 @@ import {
   orderBy,
   getDocs,
   limit,
+  deleteDoc,
 } from "firebase/firestore";
 import { db } from "./index";
 
@@ -47,6 +48,10 @@ export const User = {
       uid: uidFollow,
       createdAt: serverTimestamp(),
     });
+  },
+  removeFollow: (uid, uidUnfollow) => {
+    const collectionFollows = collection(db, "users", uid, "follows");
+    return deleteDoc(doc(collectionFollows, uidUnfollow));
   },
   subscribeFollows: (displayName, callback) => {
     const follows = query(collection(db, "users", displayName, "follows"));
