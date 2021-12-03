@@ -60,6 +60,7 @@ const Profile = () => {
 
       await User.save(displayName, newUserData);
       await updateProfile(auth.currentUser, { displayName });
+      await auth.currentUser.getIdToken(true);
       if (!user.displayName) {
         // force a complete reload when new user to set new user data
         window.location.href = Routes.HOME;
