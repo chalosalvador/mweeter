@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import withAuth from "hocs/withAuth";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { User } from "services/users";
 import MweetSkeleton from "components/MweetSkeleton";
 import Mweet from "components/Mweet";
