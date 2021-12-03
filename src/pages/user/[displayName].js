@@ -8,6 +8,7 @@ import Image from "next/image";
 import UserInfoSkeleton from "components/UserInfoSkeleton";
 import UserHasNoMweets from "components/UserHasNoMweets";
 import { UserFollowsProvider } from "hooks/useUserFollows";
+import Head from "next/head";
 
 const UserFeed = () => {
   const router = useRouter();
@@ -71,6 +72,10 @@ const UserFeed = () => {
 
   return (
     <div>
+      <Head>
+        <title>mweeter - {displayName}</title>
+      </Head>
+
       {userData ? (
         <div className="flex items-center">
           <div className="mr-3 flex-shrink-0">

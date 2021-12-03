@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24a88e22-c61b-467a-ad39-d254054329da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/UserHasNoMweets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/user/[displayName].js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FollowButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FollowButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UnfollowButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UnfollowButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/api/hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/following.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/following.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/user/[displayName].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/user/[displayName].js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

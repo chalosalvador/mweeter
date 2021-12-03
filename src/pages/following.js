@@ -7,7 +7,7 @@ const Following = () => {
   return (
     <>
       <Head>
-        <title>mweeter</title>
+        <title>mweeter - Following</title>
       </Head>
       <div className="font-bold text-xl">People you follow</div>
       <UserFollowsProvider>

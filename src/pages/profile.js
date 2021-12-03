@@ -77,7 +77,7 @@ const Profile = () => {
   return (
     <div className="w-full">
       <Head>
-        <title>mweeter</title>
+        <title>mweeter - Profile</title>
       </Head>
 
       <div className="font-bold text-xl">Your Profile</div>
